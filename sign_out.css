@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.student-portal {
+    display: flex;
+    background-color: #bcbcbc;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: rgb(56, 56, 56);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.menu-item:hover {
+    background-color: #000000;
+}
+
+.menu-item.active {
+    background-color: #4290a3;
+    color: #ffffff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #ffffff; /* Content background color */
+}
+
+.sign-out-content {
+    width: 70%; /* Set the width of your content */
+    margin: 0 auto; /* Center the content */
+    text-align: center;
+}
+
+.sign-out-button {
+    background-color: #4290a3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.sign-out-button:hover {
+    background-color: #000000;
+}

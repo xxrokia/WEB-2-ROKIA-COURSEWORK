@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Mentor Guru</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="brand">
+                    <h1>Mentor Guru</h1>
+                </div>
+                <div class="menu">
+                    <a href="#about">About</a>
+                    <a href="#events">Events</a>
+                    <a href="#testimonials">Testimonials</a>
+                </div>
+                <div class="cta">
+                    <a href="signup.html">Sign Up</a>
+                    <a href="login.html">Log In</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="homepage">
+        <div class="scroll-down">
+            <a href="#about">CONNECT AND UPSKILL TODAY!</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-page">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>We aim to connect students with mentors or coaches to boost their career growth.</p>
+            <h3>Mentor Guru will offer these courses:</h3>
+            <ul class="course-list">
+                <li>Career Advice</li>
+                <li>Resume Review</li>
+                <li>Mock Interview</li>
+            </ul>
+            <a href="signup.html" class="join-button">Join Today!</a>
+        </div>
+    </section>
+    
+   <!-- Events Section -->
+<section id="events" class="events-page">
+    <div class="events-content">
+        <h2>Events</h2>
+        <h3>Dont miss out on networking with peers and mentors!</h3>
+
+        <!-- Carousel 1 -->
+        <div class="carousel">
+            <!-- Add your carousel content here -->
+        </div>
+
+        <!-- Carousel 2 -->
+        <div class="carousel">
+            <!-- Add your carousel content here -->
+        </div>
+
+        <!-- Carousel 3 -->
+        <div class="carousel">
+            <!-- Add your carousel content here -->
+        </div>
+
+        <!-- Carousel 4 -->
+        <div class="carousel">
+            <!-- Add your carousel content here -->
+        </div>
+
+        <!-- Carousel 5 -->
+        <div class="carousel">
+            <!-- Add your carousel content here -->
+        </div>
+
+        <a href="signup.html" class="join-button">Join Today!</a>
+    </div>
+</section>
+<script>
+
+    // Array of image paths and captions for each carousel
+    const carouselsData = [
+        {
+            images: [
+                '/Users/mac/Desktop/MENTOR WEBSITE/Screenshot 2023-10-16 at 16.04.41.png',
+                '/Users/mac/Desktop/MENTOR WEBSITE/Screenshot 2023-10-16 at 16.04.41.png',
+                '/Users/mac/Desktop/MENTOR WEBSITE/Screenshot 2023-10-16 at 16.04.41.png'
+            ],
+            captions: ['Career Fairs', 'Mentorship Workshops', 'Networking Events']
+        },
+        // Add data for other carousels similarly
+    ];
+
+    // Function to create carousel content based on image paths and captions
+    function createCarousel(carouselId, images, captions) {
+        const carousel = document.getElementById(carouselId);
+
+        images.forEach((imagePath, index) => {
+            const slide = document.createElement('div');
+            slide.classList.add('slide');
+
+            const img = document.createElement('img');
+            img.src = imagePath;
+            img.alt = 'Event Image';
+
+            const caption = document.createElement('div');
+            caption.classList.add('caption');
+            caption.textContent = captions[index];
+
+            slide.appendChild(img);
+            slide.appendChild(caption);
+            carousel.appendChild(slide);
+        });
+    }
+
+    // Create carousels based on data
+    carouselsData.forEach((data, index) => {
+        createCarousel(`carousel-${index + 1}`, data.images, data.captions);
+    });
+</script>
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-page">
+        <div class="testimonials-content">
+            <h2>Testimonials</h2>
+            <!-- Testimonials content here -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Submit</button>
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Copyright Info</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">F.A.Q</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <div class="newsletter">
+                <input type="email" placeholder="Enter e-mail to subscribe to Newsletter.">
+                <button>Subscribe</button>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript code (if any) can go here
+    </script>
+</body>
+</html>
